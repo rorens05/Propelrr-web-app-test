@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+import './assets/styles/index.css';
+import './assets/styles/navigations.css';
+import 'react-toastify/dist/ReactToastify.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'mdbreact/dist/css/mdb.css';
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import { ToastContainer } from 'react-toastify';
+import { Routes } from './routes/Routes';
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<Provider store={store}>
+		<Routes />
+		<ToastContainer
+			position='top-right'
+			autoClose={5000}
+			hideProgressBar
+			newestOnTop={false}
+			closeOnClick
+			rtl={false}
+			pauseOnFocusLoss
+			draggable
+			pauseOnHover
+		/>
+	</Provider>,
+	document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
