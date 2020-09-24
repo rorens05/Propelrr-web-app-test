@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
 export class Navigation extends Component {
-	render() {
-		return (
-			<Sidebar>
-				<Navbar />
-				{this.props.children}
-			</Sidebar>
-		);
-	}
+  render() {
+    return (
+      <Sidebar active={this.props.active}>
+        <Navbar />
+        {this.props.children}
+      </Sidebar>
+    );
+  }
 }
 
 const mapStateToProps = (state) => ({});

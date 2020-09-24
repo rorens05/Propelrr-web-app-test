@@ -1,66 +1,90 @@
 #wrapper {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 #sidebar-wrapper {
-	min-height: 100vh;
-	margin-left: -15rem;
-	-webkit-transition: margin .25s ease-out;
-	-moz-transition: margin .25s ease-out;
-	-o-transition: margin .25s ease-out;
-	transition: margin .25s ease-out;
-	background-color: #304255;
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+  background-color: #304255;
+  background-image: linear-gradient(#3c4e68, #293747);
 }
 
 #sidebar-wrapper .sidebar-heading {
-	padding: 0.875rem 1.25rem;
-	font-size: 1.2rem;
-	font-weight: bold;
-	color: rgb(194, 255, 252);
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5bf7ea;
 }
 
 #sidebar-wrapper .list-group {
-	width: 15rem;
+  width: 15rem;
+}
+
+#sidebar-wrapper .sidebar-link {
+  color: rgb(208, 208, 208);
+}
+
+#sidebar-wrapper .sidebar-link.active,
+#sidebar-wrapper .sidebar-link:hover {
+  color: #5bf7ea;
 }
 
 #page-content-wrapper {
-	min-width: 100vw;
+  min-width: 100vw;
 }
 
 #wrapper.toggled #sidebar-wrapper {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 #wrapper #menu-toggle {
-	display: flex;
-	position: absolute;
-	z-index: 100;
-	padding: 10px;
-	cursor: pointer;
-	font-size: 20px;
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  padding: 12px;
+  padding-top: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666666 !important;
 }
 
+.navbar-text-color {
+  color: #666666 !important;
+}
+
+.nav-search {
+  width: 50%;
+  flex-direction: column;
+}
+
+.nav-search {
+  color: #666666 !important;
+}
 .sidebar-content {
-	background-color: #eef2f3;
-	height: 100vh;
+  background-color: #eef2f3;
+  height: 100vh;
 }
 
 #menu-toggle:hover {
-	opacity: 0.9;
-	background-color: rgb(230, 230, 230);
+  opacity: 0.9;
+  background-color: rgb(230, 230, 230);
 }
 
 @media (min-width: 768px) {
-	#sidebar-wrapper {
-		margin-left: 0;
-	}
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
 
-	#page-content-wrapper {
-		min-width: 0;
-		width: 100%;
-	}
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
 
-	#wrapper.toggled #sidebar-wrapper {
-		margin-left: -15rem;
-	}
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
 }
