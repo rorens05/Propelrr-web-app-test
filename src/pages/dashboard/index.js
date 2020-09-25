@@ -5,6 +5,7 @@ import { Navigation } from "../../components/navigation";
 import { DASHBOARD } from "../../utils/contants";
 import { Summary } from "./components/Summary";
 import MainChart from "./components/MainChart";
+import { DashboardCards } from "./components/DashboardCards";
 
 class Dashboard extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class Dashboard extends React.Component {
         <MDBContainer>
           <Summary />
           <MainChart />
+          <DashboardCards />
         </MDBContainer>
       </Navigation>
     );

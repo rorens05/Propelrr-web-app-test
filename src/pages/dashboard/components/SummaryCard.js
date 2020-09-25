@@ -8,10 +8,10 @@ export default function SummaryCard({
   textStyle = "text-default",
 }) {
   return (
-    <div className="bg-white py-2 px-3 shadow rounded">
+    <div className="bg-white py-2 px-3 shadow rounded mt-4">
       <div className="d-flex justify-content-between align-items-center">
         <span className="float-left font-weight-bold ">
-          <i class={`${icon} ${textStyle} d-inline-block mr-2 `}></i>
+          <i className={`${icon} ${textStyle} d-inline-block mr-2 `}></i>
           <span className="blue-grey-text">{title}</span>
         </span>
         <small className="float-right text-black-50">{subtitle}</small>

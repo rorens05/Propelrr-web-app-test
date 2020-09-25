@@ -13,38 +13,42 @@ export class Sidebar extends Component {
 
   onToggled = () => {
     document.querySelector("#wrapper").classList.toggle("toggled");
+    this.setState({ toggled: !this.state.toggled });
   };
 
   render() {
     const { children, active } = this.props;
     return (
       <div className="d-flex" id="wrapper">
-        <div className="border-right" id="sidebar-wrapper">
+        <div
+          className="border-right morpheus-den-gradient"
+          id="sidebar-wrapper"
+        >
           <div className="sidebar-heading">ANALYTICS WEB APP </div>
           <div className="list-group mt-3">
             <Link
               to="/dashboard"
               className={active == DASHBOARD ? ACTIVE : INACTIVE}
             >
-              <i class="fas fa-tachometer-alt d-inline-block mx-2"></i>
+              <i className="fas fa-tachometer-alt d-inline-block mx-2"></i>
               Dashboard
             </Link>
             <Link
               to="/reports"
               className={active == REPORTS ? ACTIVE : INACTIVE}
             >
-              <i class="fas fa-chart-pie d-inline-block mx-2"></i>
+              <i className="fas fa-chart-pie d-inline-block mx-2"></i>
               Reports
             </Link>
             <Link
               to="/task_tracker"
               className={active == TASK_TRACKER ? ACTIVE : INACTIVE}
             >
-              <i class="fas fa-list-alt d-inline-block mx-2"></i>
+              <i className="fas fa-list-alt d-inline-block mx-2"></i>
               Task Tracker
             </Link>
             <Link to="/login" className={INACTIVE}>
-              <i class="fas fa-sign-out-alt d-inline-block mx-2"></i>
+              <i className="fas fa-sign-out-alt d-inline-block mx-2"></i>
               Signout
             </Link>
           </div>
@@ -52,9 +56,13 @@ export class Sidebar extends Component {
 
         <div id="page-content-wrapper" className="position-relative">
           <span className="" id="menu-toggle" onClick={this.onToggled}>
-            <i className="fas fa-bars" />
+            {this.state.toggled ? (
+              <i className="fas fa-chevron-right"></i>
+            ) : (
+              <i className="fas fa-chevron-left"></i>
+            )}
           </span>
-          <div className="sidebar-content">{children}</div>
+          <div className="sidebar-content pb-3">{children}</div>
         </div>
       </div>
     );

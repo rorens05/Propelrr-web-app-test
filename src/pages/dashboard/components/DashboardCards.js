@@ -1,13 +1,16 @@
 import { MDBCol, MDBRow } from "mdbreact";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import SummaryCard from "./SummaryCard";
+import Activity from "./dashboard_cards/Activity";
+import Goal from "./dashboard_cards/Goal";
+import MonthlyGoal from "./dashboard_cards/MonthlyGoal";
+import Tasks from "./dashboard_cards/Tasks";
 
-export const Summary = () => {
+export const DashboardCards = () => {
   return (
     <MDBRow className="">
       <MDBCol md="3">
-        <SummaryCard
+        <Goal
           textStyle="blue-text"
           icon="fas fa-chart-line"
           title="Sales"
@@ -16,7 +19,7 @@ export const Summary = () => {
         />
       </MDBCol>
       <MDBCol md="3">
-        <SummaryCard
+        <MonthlyGoal
           textStyle="green-text"
           icon="fas fa-dollar-sign"
           title="Revenue"
@@ -25,7 +28,7 @@ export const Summary = () => {
         />
       </MDBCol>
       <MDBCol md="3">
-        <SummaryCard
+        <Tasks
           textStyle="red-text"
           icon="fas fa-exclamation-circle"
           title="Lost Sales"
@@ -34,7 +37,7 @@ export const Summary = () => {
         />
       </MDBCol>
       <MDBCol md="3">
-        <SummaryCard
+        <Activity
           textStyle="text-info"
           icon="fas fa-bell"
           title="Active users"
@@ -50,4 +53,4 @@ const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Summary);
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardCards);

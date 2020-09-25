@@ -52,6 +52,10 @@
   color: #666666 !important;
 }
 
+.navbar {
+  z-index: 1 !important;
+}
+
 .navbar-text-color {
   color: #666666 !important;
 }
@@ -67,6 +71,7 @@
 .sidebar-content {
   background-color: #eef2f3;
   height: 100vh;
+  overflow: auto;
 }
 
 #menu-toggle:hover {

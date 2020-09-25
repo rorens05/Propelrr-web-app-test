@@ -3,7 +3,7 @@ import Search from "./Search";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light shadow-none bg-white p-0">
+    <nav className="navbar sticky-top navbar-expand-sm navbar-light shadow-none bg-white p-0">
       <Search />
       <button
         className="navbar-toggler"
@@ -21,19 +21,24 @@ export default function Navbar() {
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <a className="nav-link " href="#">
-              <i class="fas fa-bell navbar-text-color"></i>{" "}
+              <i className="fas fa-bell navbar-text-color"></i>
+              <span className="d-inline-block d-sm-none ml-2">
+                Notifications
+              </span>
               <span className="sr-only">(current)</span>
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              <i class="fas fa-envelope navbar-text-color"></i>{" "}
+              <i className="fas fa-envelope navbar-text-color"></i>
+              <span className="d-inline-block d-sm-none ml-2">Messages</span>
               <span className="sr-only">(current)</span>
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              <i class="fas fa-user navbar-text-color"></i>
+              <i className="fas fa-user navbar-text-color"></i>
+              <span className="d-inline-block d-sm-none ml-2">Profile</span>
               <span className="sr-only">(current)</span>
             </a>
           </li>

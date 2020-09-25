@@ -5,6 +5,7 @@ export const LINE_CHART_THEME = {
   borderCapStyle: "butt",
   borderDash: [],
   borderDashOffset: 0.0,
+  borderWidth: 1,
   borderJoinStyle: "miter",
   pointBorderColor: "rgb(150, 150,150, 58)",
   pointBackgroundColor: "rgb(255, 255, 255)",
